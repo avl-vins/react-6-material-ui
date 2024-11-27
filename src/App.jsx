@@ -7,6 +7,7 @@ import { DisplayComponent } from "./components/DisplayComponent"
 import { OverflowComponent } from "./components/OverflowComponent"
 import { ShadowComponent } from "./components/ShadowComponent"
 import { GridComponent } from "./components/GridComponent"
+import { StackComponent } from "./components/StackComponent"
 
 
 function App() {
@@ -39,7 +40,7 @@ function App() {
       <OverflowComponent/>
       <ShadowComponent/>
          <GridComponent/>
-
+  <StackComponent/>
      
       </Grid>
     </ProviderTheme>
