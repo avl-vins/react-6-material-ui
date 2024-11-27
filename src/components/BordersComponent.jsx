@@ -45,8 +45,8 @@ export const BordersComponent = () => {
 
     return (
 
-    <Box width='25%' display='flex' sx={{...res , ...colo }}
-         flexDirection={'column'} padding={4}  >
+    <Box width='50%' display='flex' sx={{...res , ...colo }}
+         flexDirection={'column'} padding={4} justifyContent='center' textAlign='center'  >
    
         <Typography variant="h5" pb={2}>Borders </Typography>
 

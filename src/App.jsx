@@ -1,10 +1,12 @@
 import { useState } from "react"
 import { ProviderTheme } from "./theme/ProviderTheme"
-import { Box, Typography } from "@mui/material"
+import { Box, Grid2, Typography } from "@mui/material"
+import { Grid2 as Grid } from "@mui/material"
 import { BordersComponent } from "./components/BordersComponent"
 import { DisplayComponent } from "./components/DisplayComponent"
 import { OverflowComponent } from "./components/OverflowComponent"
 import { ShadowComponent } from "./components/ShadowComponent"
+import { GridComponent } from "./components/GridComponent"
 
 
 function App() {
@@ -18,30 +20,28 @@ function App() {
 
   return (
     <ProviderTheme dark={dark}>
+         <Box display='flex' flexDirection='column' p={2} textAlign='center'>
 
-      
-      <Box  height={'100%'} width={'100vw'} p={4} 
-            display={"flex"} flexDirection={"column"} 
-            alignItems={"center"}  gap={4} >
+            <Typography variant="h2"  >Material UI</Typography>
+            
+            <Box textAlign='right' >
+        
+                <button onClick={toggleTheme} >{ dark ?  'Dark Mode' : 'Light Mode'}</button>
 
-        <Typography variant="h2"  >Material UI</Typography>
-        <Box textAlign={"right"} >
-          
-        <button onClick={toggleTheme} >{ dark ?  'Dark Mode' : 'Light Mode'}</button>
-
+            </Box>
         </Box>
-        <BordersComponent/>
-        <DisplayComponent/>
-        <OverflowComponent/>
-        <ShadowComponent/>
-        
-        
+    <Grid container spacing={4} p={4} justifyContent='center' >
+      
+   
 
-        
-      </Box>
+      <BordersComponent/>
+         <DisplayComponent/>
+      <OverflowComponent/>
+      <ShadowComponent/>
+         <GridComponent/>
 
      
-
+      </Grid>
     </ProviderTheme>
   )
 }
